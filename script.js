@@ -1,16 +1,15 @@
-// Load theme from localStorage
+// Apply saved theme on load
 document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark');
-    }
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
   });
   
-  // Toggle theme + store in localStorage
-  document.getElementById('toggleBtn').addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-  
-    const currentTheme = document.body.classList.contains('dark') ? 'dark' : 'light';
-    localStorage.setItem('theme', currentTheme);
-  });
+  function setTheme(themeName) {
+    // Remove all theme classes
+    document.body.className = ''; 
+    document.body.classList.add(themeName);
+    
+    // Save to localStorage
+    localStorage.setItem('theme', themeName);
+  }
   

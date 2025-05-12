@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Theme Toggle</title>
+  <title>Theme Switcher</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>🌞 Welcome to Theme Switcher 🌙</h1>
+    <h1>Welcome to the Multi-Theme Switcher </h1>
     
-    <img src="asta.jpeg"  class="animated-image">
-    
-    <p>Click the button below to switch between <strong>Light</strong> and <strong>Dark</strong> mode. Your preference will be saved!</p>
-    
-    <button id="toggleBtn">🌗 Toggle Theme</button>
+    <img src="asta.jpeg" class="animated-image" alt="Animated Visual">
+
+    <p>Select a theme below. Your choice will be remembered!</p>
+
+    <div class="button-group">
+      <button onclick="setTheme('light')">☀️ Light</button>
+      <button onclick="setTheme('dark')">🌙 Dark</button>
+      <button onclick="setTheme('ocean')">🌊 Ocean</button>
+      <button onclick="setTheme('sunset')">🌇 Sunset</button>
+    </div>
   </div>
 
   <footer>
